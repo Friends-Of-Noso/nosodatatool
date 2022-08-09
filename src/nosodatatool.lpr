@@ -17,7 +17,8 @@ procedure Usage;
 begin
   Version;
   WriteLn('usage:');
-  WriteLn(#9'nosodatatool block <block#> [-j|--json]');
+  WriteLn(#9'nosodatatool block <block#>');
+  //WriteLn(#9'nosodatatool block <block#> [-j|--json]');
   WriteLn(#9'nosodatatool -h|--help');
   WriteLn(#9'nosodatatool -v|--version');
   WriteLn;
@@ -25,9 +26,10 @@ begin
   WriteLn(#9'block'#9'displays the content of <block#>');
   WriteLn;
   WriteLn('Options:');
-  WriteLn(#9'-j|--json'#9'displays the data in JSON');
+  //WriteLn(#9'-j|--json'#9'displays the data in JSON');
   WriteLn(#9'-h|--help'#9'displays this message');
   WriteLn(#9'-v|--version'#9'displays the version');
+  WriteLn;
 end;
 
 

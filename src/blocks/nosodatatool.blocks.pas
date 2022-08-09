@@ -77,7 +77,6 @@ begin
       block:= tblock.Create(blockLegacy);
       try
         WriteLn(block.AsJSON);
-        WriteLn(block.Operations.AsJSON);
       finally
         block.Free;
       end;
