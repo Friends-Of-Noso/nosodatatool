@@ -10,7 +10,7 @@ uses
 const
   cVersionMajor = 0;
   cVersionMinor = 1;
-  cVersionPatch = 1;
+  cVersionPatch = 2;
 
   cVersionFormat = 'v%d.%d.%d';
 
