@@ -1,0 +1,3 @@
+[submodule "depends/NosoData"]
+	path = depends/NosoData
+	url = git@github.com:Friends-Of-Noso/NosoData.git
