@@ -15,8 +15,8 @@ A CLI application to show contents of data inside:
 
 ```
   nosodatatool block <block#>
-  nosodatatool -h|--help');
-  nosodatatool -v|--version');
+  nosodatatool -h|--help
+  nosodatatool -v|--version
 
 Commands:
   block  displays the content of <block#>
@@ -28,7 +28,7 @@ Options:
 
 ## Cloning repository and compiling project
 
-Since this project depends on another from the organization [Friend of Noso](https://github.com/Friends-Of-Noso), you need to clone the repository with `--rcurse-submodules`:
+Since this project depends on another from the organization [Friend of Noso](https://github.com/Friends-Of-Noso), you need to clone the repository with `--recurse-submodules`:
 
 ```console
 $ git clone --recurse-submodules git@github.com:Friends-Of-Noso/nosodatatool.git
