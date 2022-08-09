@@ -1,5 +1,6 @@
 # Noso Data Tool project specific
 /bin
+/depends
 
 # Compiled l10n files: .mo should be ignored
 *.mo
