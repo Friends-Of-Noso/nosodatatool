@@ -48,4 +48,5 @@ $ lazbuild -B --bm=Release src/nosodatatool.lpi
 
 ## To do
 
-1. Complete `JSON` output of the `TBlock` from [NosoData](https://github.com/Friends-Of-Noso/NosoData) to enable `JSON` output
+1. Complete the display of ALL the fields of the header
+2. Complete `JSON` output of the `TBlock` from [NosoData](https://github.com/Friends-Of-Noso/NosoData) to enable `JSON` output
