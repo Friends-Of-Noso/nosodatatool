@@ -35,16 +35,21 @@ jobs:
 
     - name: Build the Main App (Windows)
       if: ${{ matrix.operating-system == 'windows-latest' }}
-      run: lazbuild -B --bm=Release "src/nosodatatool.lpi"
+      run: |
+        lazbuild -B --bm=Release "src/nosodatatool.lpi"
+        mv bin/nosodatatool.exe bin/nosodatatool-x86_64-win64.exe
 
     - name: Build the Main App (Ubuntu)
       if: ${{ matrix.operating-system == 'ubuntu-latest' }}
       run: |
         lazbuild -B --bm=Release "src/nosodatatool.lpi"
+        mv bin/nosodatatool bin/nosodatatool-x86_64-linux
 
     - name: Build the Main App (macOS)
       if: ${{ matrix.operating-system == 'macos-latest' }}
-      run: lazbuild -B --bm=Release "src/nosodatatool.lpi"
+      run: |
+        lazbuild -B --bm=Release "src/nosodatatool.lpi"
+        mv bin/nosodatatool bin/nosodatatool-x86_64-darwin
 
     - name: Upload binary (Windows)
       if: ${{ (matrix.operating-system == 'windows-latest')  &&  (matrix.lazarus-versions == 'stable') }}
