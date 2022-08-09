@@ -10,3 +10,22 @@
 A CLI application to show contents of data inside:
 
 - The Blocks
+
+## Usage
+
+```
+  nosodatatool block <block#>
+  nosodatatool -h|--help');
+  nosodatatool -v|--version');
+
+Commands:
+  block  displays the content of <block#>
+
+Options:
+  -h|--help  displays this message
+  -v|--version  displays the version
+```
+
+## To do
+
+1. Complete `JSON` output of the `TBlock` from [NosoData](https://github.com/Friends-Of-Noso/NosoData) to enable `JSON` output
