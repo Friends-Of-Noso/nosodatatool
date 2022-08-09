@@ -76,6 +76,12 @@ begin
             begin
               displayJSON:= ((ParamStr(3) = '-j') or (ParamStr(3) = '--json'));
               DisplayBlock(blockFilename, displayJSON);
+            end
+            else
+            begin
+              Version;
+              WriteLn;
+              WriteLn('ERROR: cannot find block "',blockFilename,'"');
             end;
           end
           else

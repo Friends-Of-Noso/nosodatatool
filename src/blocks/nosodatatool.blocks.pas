@@ -71,6 +71,7 @@ begin
           WriteLn(#9'No entries to display');
         end;
       end;
+      WriteLn;
     end
     else
     begin
