@@ -21,9 +21,11 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
+        clean: true
         submodules: true
+        set-safe-directory: true
 
     - name: Install Lazarus
       uses: gcarreno/setup-lazarus@v3.2
@@ -35,7 +37,7 @@ jobs:
       if: ${{ matrix.operating-system == 'windows-latest' }}
       run: lazbuild -B --bm=Release "src/nosodatatool.lpi"
 
-    - name: Build the Main App GTK2 (Ubuntu)
+    - name: Build the Main App (Ubuntu)
       if: ${{ matrix.operating-system == 'ubuntu-latest' }}
       run: |
         lazbuild -B --bm=Release "src/nosodatatool.lpi"
