@@ -49,14 +49,21 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: nosodatatool
-        path: bin/nosodatatool.exe
+        path: bin/nosodatatool-x86_64-win64.exe
 
     - name: Upload binary (Ubuntu)
       if: ${{ (matrix.operating-system == 'ubuntu-latest')  &&  (matrix.lazarus-versions == 'stable') }}
       uses: actions/upload-artifact@v2
       with:
         name: nosodatatool
-        path: bin/nosodatatool
+        path: bin/nosodatatool-x86_64-linux
+
+    - name: Upload binary (macOS)
+      if: ${{ (matrix.operating-system == 'macos-latest')  &&  (matrix.lazarus-versions == 'stable') }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: nosodatatool
+        path: bin/nosodatatool-x86_64-darwin
 
   package-release:
     if: contains(github.ref, '/tags/')
@@ -83,8 +90,9 @@ jobs:
       run: |
         cd nosodatatool
         chmod +x nosodatatool
-        zip -r nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-win64.zip nosodatatool.exe
-        tar -zcvf nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz nosodatatool
+        zip -r nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-win64.zip nosodatatool-x86_64-win64.exe
+        tar -zcvf nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz nosodatatool-x86_64-linux
+        tar -zcvf nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-darwin.tar.gz nosodatatool-x86_64-darwin
 
     - name: Create GitHub release
       uses: softprops/action-gh-release@v1
