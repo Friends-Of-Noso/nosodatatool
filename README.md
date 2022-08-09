@@ -26,6 +26,26 @@ Options:
   -v|--version  displays the version
 ```
 
+## Cloning repository and compiling project
+
+Since this project depends on another from the organization [Friend of Noso](https://github.com/Friends-Of-Noso), you need to clone the repository with `--rcurse-submodules`:
+
+```console
+$ git clone --recurse-submodules git@github.com:Friends-Of-Noso/nosodatatool.git
+```
+
+**OR**
+
+```console
+$ git clone --recurse-submodules https://github.com/Friends-Of-Noso/nosodatatool.git
+```
+
+Once that is done, you can then just compile as usual under Lazarus, or use `lazbuild`:
+
+```console
+$ lazbuild -B --bm=Release src/nosodatatool.lpi
+```
+
 ## To do
 
 1. Complete `JSON` output of the `TBlock` from [NosoData](https://github.com/Friends-Of-Noso/NosoData) to enable `JSON` output
