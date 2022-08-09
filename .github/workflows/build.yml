@@ -91,7 +91,7 @@ jobs:
       uses: actions/download-artifact@v2
 
     - name: List files
-      run: ls -alF
+      run: ls -alF nosodatatool
 
     - name: Create release files
       run: |
