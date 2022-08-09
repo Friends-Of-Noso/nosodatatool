@@ -86,12 +86,12 @@ jobs:
       uses: actions/download-artifact@v2
 
     - name: List files
-      run: ls -alF nosodatatool
+      run: ls -alF
 
     - name: Create release files
       run: |
         cd nosodatatool
-        chmod +x nosodatatool
+        chmod +x nosodatatool-x86_64-linux nosodatatool-x86_64-darwin
         zip -r nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-win64.zip nosodatatool-x86_64-win64.exe
         tar -zcvf nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-linux.tar.gz nosodatatool-x86_64-linux
         tar -zcvf nosodatatool-${{ steps.vars.outputs.tag }}-x86_64-darwin.tar.gz nosodatatool-x86_64-darwin
