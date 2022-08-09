@@ -14,6 +14,7 @@ A CLI application to show contents of data inside:
 ## Usage
 
 ```
+Usage:
   nosodatatool block <block#>
   nosodatatool -h|--help
   nosodatatool -v|--version
